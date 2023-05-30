@@ -1,0 +1,38 @@
+<a href="/customers/add" class="btn btn-primary">
+    <i class="fa fa-plus"></i> Create
+</a>
+<hr />
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Birthday</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each customers}}
+          <tr>
+              <td>{{id}}</td>
+              <td>{{fullName}}</td>
+              <td>{{birthday}}</td>
+              <td>{{gender}}</td>
+              <td>{{phoneNumber}}</td>
+              <td>{{email}}</td>
+              <td>
+                <a href="/customers/edit/{{id}}" class="btn btn-success">
+                  <i class="fa fa-pen"></i>
+                </a>
+                <a href="/customers/delete/{{id}}" class="btn btn-danger">
+                  <i class="fa fa-trash"></i>
+                </a>
+            </td>
+          </tr>
+        {{/each}}
+    </tbody>
+</table>

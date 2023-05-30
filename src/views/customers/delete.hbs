@@ -1,0 +1,18 @@
+<h2>Delete Customer</h2>
+
+<form method="post">
+    ID: <input value="{{customer.id}}" class="form-control" readonly /> <br />
+    Full Name: <input value="{{customer.fullName}}" class="form-control" readonly /> <br />
+    Birthday: <input value="{{customer.birthday}}" class="form-control" readonly /> <br />
+    Gender: <br />
+    {{#if isMale}}
+      <input class="form-control" value="Male" readonly /> <br />
+    {{else}}
+      <input value="Female" class="form-control" readonly /> <br />
+    {{/if}}
+    Phone Number: <input value="{{customer.phoneNumber}}" class="form-control" readonly /> <br />
+    Email: <input value="{{customer.email}}" class="form-control" readonly /> <br />
+
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a href="/customers" class="btn btn-outline-primary">Back</a>
+</form>
